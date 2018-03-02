@@ -1,7 +1,12 @@
-$font-stack:    Helvetica, sans-serif;
 $primary-color: #333;
 
-body {
-  font: 100% $font-stack;
-  color: $primary-color;
+@font-face {
+  font-family: pfdintextpro-regular;  
+  src: url(../../fonts/pfdintextpro-regular-webfont.woff);
 }
+
+body {
+  color: $primary-color;
+  font-family: pfdintextpro-regular;
+}
+
