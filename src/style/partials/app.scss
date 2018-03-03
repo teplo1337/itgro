@@ -126,11 +126,9 @@ body {
 }
 .radio input[type='radio'] {
   display: none;
-  /*removes original button*/
 }
 
 .radio label:before {
-  /*styles outer circle*/
   content: " ";
   display: inline-block;
   position: relative;
@@ -212,6 +210,10 @@ body {
   &:focus {
     outline: none;
     border: 1px solid $blue-medium-color;
+  }
+  &:hover {
+    outline: none;
+    border: 1px solid lighten($blue-medium-color, 20%);
   }
   @media screen and (max-width: 780px) {
     width: 292px;
