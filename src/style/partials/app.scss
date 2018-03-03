@@ -143,6 +143,7 @@ body {
 }
 
 .block__input {
+  display: block;
   margin-top: 3px;
   padding-left: 15px;
   font-size: 16px;
@@ -168,6 +169,7 @@ body {
 }
 
 .block__textarea {
+  display: block;
   width: 300px;
   height: 102px;
   margin-top: 3px;
