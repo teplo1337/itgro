@@ -115,7 +115,7 @@ body {
     border-left: none;
     border-right: none;    
     height: 50px;
-    width: 330px;
+    width: 340px;
     line-height: 48px;
     @media screen and (max-width: 780px) {
       width: 320px;
@@ -168,7 +168,7 @@ body {
 }
 
 .block__textarea {
-  width: 300px;
+  width: 310px;
   height: 102px;
   margin-top: 3px;
   resize: none;
@@ -191,7 +191,6 @@ body {
 .block__warning {
   display: none;
   padding: 20px;
-  min-width: 700px;
   background-color: #fee3cd;
   color: #ff8645;
 
@@ -206,7 +205,6 @@ body {
 .block__error{
   display: none;
   padding: 20px;
-  min-width: 700px;
   background-color: rgb(255, 173, 173);
   color: rgb(255, 61, 61);
 
@@ -221,7 +219,6 @@ body {
 .block__success {
   display: none;
   padding: 20px;
-  min-width: 700px;
   background-color: rgb(165, 248, 165);
   color: rgb(34, 170, 34);
 
