@@ -1,43 +1,48 @@
 <form class="order-form">
-  <section class="order-form__block">
+  <section class="order-form__header">
 
-    <label class="order-form__block__label">Представтесь*</label>
-    <input class="order-form__block__input" placeholder="Иван Иванович Иванов">
+    <section class="block">
+      <label class="block__label">Представтесь*</label>
+      <input class="block__input" placeholder="Иван Иванович Иванов">
 
-    <label class="order-form__block__label">Телефон*</label>
-    <input class="order-form__block__input" placeholder="+7(ХХХ)ХХХ-ХХ-ХХ">
+      <label class="block__label">Телефон*</label>
+      <input class="block__input" placeholder="+7(ХХХ)ХХХ-ХХ-ХХ">
 
-    <label class="order-form__block__label">E-mail*</label>
-    <input class="order-form__block__input" placeholder="Иван Иванович Иванов">
+      <label class="block__label">E-mail*</label>
+      <input class="block__input" placeholder="Иван Иванович Иванов">
+    </section>
 
-  </section>
+    <section class="block">
+      <label class="block__label">Период*</label>
+      <div>
+          <input class="block__radio" type="radio" name="duration" value="3">
+          <label>3 месяца</label>    
+          <input class="block__radio" type="radio" name="duration" value="6">
+          <label>6 месяцев</label> 
+          <input class="block__radio" type="radio" name="duration" value="12">
+          <label>1 год</label> 
+      </div>
+      <label class="block__label">Реквизиты*</label>
+      <textarea id="block__textarea"></textarea>   
 
-  <section class="order-form__block">
-
-    <label class="order-form__block__label">Период*</label>
-
-    <input class="order-from__block__radio" type="radio" name="duration" value="3">3 месяца    
-    <input class="order-from__block__radio" type="radio" name="duration" value="6">6 месяцев
-    <input class="order-from__block__radio" type="radio" name="duration" value="12">1 год
-
-    <label class="order-form__block__label">Реквизиты*</label>
-    <textarea id="order-form__block__textarea"></textarea>   
-  </section>
-
-  <section class="order-form__block">
+    </section>
     
-    <div class="order-from__block__warning">
-      <span onclick="this.parentElement.style.display='none';">&times;</span>
+  </section>
+
+  <section class="order-form__footer">
+
+    <div class="block__warning">
+      <span class="block__closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
       Внимание! Необходимо заполнить все обязательные поля!
     </div>
 
-    <div class="order-from__block__error">
-      <span onclick="this.parentElement.style.display='none';">&times;</span>
+    <div class="block__error">
+      <span class="block__closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
       Ошибка! Неверный ответ сервера!
     </div>
 
-    <div class="order-from__block__success">
-      <span onclick="this.parentElement.style.display='none';">&times;</span>
+    <div class="block__success">
+      <span class="block__closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
       Ваша заявка отправлена, с вами свяжутся в ближайшее время!
     </div>
 
