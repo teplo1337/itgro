@@ -2,28 +2,23 @@
   <section class="order-form__header">
 
     <section class="block">
-      <label class="block__label">Представтесь*</label>
-      <input class="block__input" placeholder="Иван Иванович Иванов">
-
-      <label class="block__label">Телефон*</label>
-      <input class="block__input" placeholder="+7(ХХХ)ХХХ-ХХ-ХХ">
-
-      <label class="block__label">E-mail*</label>
-      <input class="block__input" placeholder="Иван Иванович Иванов">
+      <label class="block__label">Представтесь*<input class="block__input" name="name" type="text" placeholder="Иван Иванович Иванов"></label>
+      
+      <label class="block__label">Телефон*<input class="block__input" name="phone" type="phone" placeholder="+7(ХХХ)ХХХ-ХХ-ХХ"></label>
+      
+      <label class="block__label">E-mail*<input class="block__input" name="email" type="email" placeholder="Иван Иванович Иванов"></label>
+      
     </section>
 
     <section class="block">
       <label class="block__label">Период*</label>
       <div>
-          <input class="block__radio" type="radio" name="duration" value="3">
-          <label>3 месяца</label>    
-          <input class="block__radio" type="radio" name="duration" value="6">
-          <label>6 месяцев</label> 
-          <input class="block__radio" type="radio" name="duration" value="12">
-          <label>1 год</label> 
+        <label><input class="block__radio" type="radio" name="duration" value="3">3 месяца</label>    
+        <label> <input class="block__radio" type="radio" name="duration" value="6">6 месяцев</label> 
+        <label><input class="block__radio" type="radio" name="duration" value="12">1 год</label> 
       </div>
-      <label class="block__label">Реквизиты*</label>
-      <textarea id="block__textarea"></textarea>   
+
+      <label class="block__label">Реквизиты*<textarea class="block__textarea" name="text"></textarea>  </label>       
 
     </section>
     
@@ -38,7 +33,7 @@
 
     <div class="block__error">
       <span class="block__closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-      Ошибка! Неверный ответ сервера!
+      Ошибка! Неверный ответ сервера! Попробуйте позже.
     </div>
 
     <div class="block__success">
