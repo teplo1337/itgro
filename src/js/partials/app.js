@@ -27,12 +27,11 @@ const validator = (element) => {
   } else {
 
     element.addClass('wrn');
-    element.click(()=> {
+    element.click(() => {
       $('.block__warning').hide();
       element.removeClass('wrn');
 
     });
-
     
     $('.block__warning').show();
     return undefined;
@@ -44,8 +43,7 @@ const sendData = (data) => {
     url: '/api',
     type: 'POST',
     data: JSON.stringify(data),
-    contentType: "application/json"
-    
+    contentType: "application/json"    
   })
   .done ((msg) => {   
       $('.block__success').show();

@@ -113,7 +113,6 @@ gulp.task('build', [
     'image:build'
 ]);
 
-
 gulp.task('watch', function(){
     watch([path.watch.html], function(event, cb) {
         gulp.start('html:build');
@@ -131,6 +130,5 @@ gulp.task('watch', function(){
         gulp.start('fonts:build');
     });
 });
-
 
 gulp.task('default', ['build', 'webserver', 'watch']);

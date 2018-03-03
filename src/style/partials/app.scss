@@ -120,42 +120,43 @@ body {
   height: 50px;
   width: 330px;
   line-height: 48px;
+
+  input[type='radio'] {
+    display: none;
+  }
+
+  label:before {
+    content: " ";
+    display: inline-block;
+    position: relative;
+    top: 0px;
+    margin: 0 5px 0 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 8px;
+    border: 1px solid $gray-medium-color;
+    background-color: transparent;
+  }
+
+  label {
+    position: relative;
+    margin-right: 30px;
+  }
+  
+  label input[type='radio']:checked+span {
+    border-radius: 11px;
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    top: 5px;
+    left: 2px;
+    display: block;
+    background-color: $orange-medium-color;
+  }
+
   @media screen and (max-width: 780px) {
     width: 320px;
   }
-}
-.radio input[type='radio'] {
-  display: none;
-}
-
-.radio label:before {
-  content: " ";
-  display: inline-block;
-  position: relative;
-  top: 0px;
-  margin: 0 5px 0 0;
-  width: 10px;
-  height: 10px;
-  border-radius: 8px;
-  border: 1px solid $gray-medium-color;
-  background-color: transparent;
-}
-
-.radio label {
-  position: relative;
-  margin-right: 30px;
-}
-
-.radio label input[type='radio']:checked+span {
-  /*styles inside circle*/
-  border-radius: 11px;
-  width: 8px;
-  height: 8px;
-  position: absolute;
-  top: 5px;
-  left: 2px;
-  display: block;
-  background-color: $orange-medium-color;
 }
 
 .content__line {
