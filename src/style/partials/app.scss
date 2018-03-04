@@ -195,7 +195,7 @@ body {
   }
   &:hover {
     outline: none;
-    border: 1px solid lighten($blue-medium-color, 20%);
+    cursor: pointer;
   }
   @include placeholder {
     color: transparent;
@@ -227,7 +227,7 @@ body {
   }
   &:hover {
     outline: none;
-    border: 1px solid lighten($blue-medium-color, 20%);
+    cursor: pointer;
   }
   @media screen and (max-width: 780px) {
     width: 292px;
