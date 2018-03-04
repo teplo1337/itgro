@@ -1,2 +1,9 @@
 # itgro
-vanila js html 
+Верстка по макету
+<br>
+install pakage:
+```
+npm install
+bower i
+gulp
+```
