@@ -34,6 +34,13 @@ $blue-medium-color: #3dc5ed;
   }
 }
 
+@mixin placeholder {
+  &::-webkit-input-placeholder { @content; }
+  &:-moz-placeholder           { @content; }
+  &::-moz-placeholder          { @content; }
+  &:-ms-input-placeholder      { @content; }  
+}
+
 body {
   font-family: pfdintextpro-regular;
 
@@ -190,9 +197,12 @@ body {
     outline: none;
     border: 1px solid lighten($blue-medium-color, 20%);
   }
+  @include placeholder {
+    color: transparent;
+  }
   @media screen and (max-width: 780px) {
     width: 305px;
-  }  
+  }
 }
 
 .block__radio {
@@ -269,4 +279,7 @@ body {
 
 .wrn {
   border: 1px solid $orange-dark-color;
+  @include placeholder {
+    color: darken($gray-medium-color, 30%);
+  }
 }
