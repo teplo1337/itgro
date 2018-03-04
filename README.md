@@ -1,7 +1,7 @@
 # itgro
 Верстка по макету
 <br>
-install pakage:
+install:
 ```
 npm install
 bower i
