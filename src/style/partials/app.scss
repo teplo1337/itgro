@@ -128,7 +128,7 @@ body {
   @include block (700px);
   @media screen and (max-width: 780px) {
     @include block (320px);
-    margin-top: 10px;
+    margin-top: 0px;
   }
   margin-top: 9px;
 }
@@ -246,9 +246,9 @@ body {
 .content__line {
   @include block (698px); 
   @media screen and (max-width: 750px) {
-    @include block (320px); 
-    margin-top: 26px;
-    margin-bottom: 0px;
+    @include block (290px);
+    margin-top: 30px;
+    margin-bottom: 6px;
   }  
   border: 0.5px solid #e6e6e6;
   margin-bottom: 0px;
