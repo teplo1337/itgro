@@ -286,19 +286,19 @@ body {
 .order-form__footer {
   margin-top: 30px;
 }
-
-.block__warning {
+@mixin message__block ($color1, $color2, $color3) {
   display: none;
   padding: 20px;
   text-align: left;
   line-height: 25px;
-  background-color: #fee3cd;
-  color: #ed9a5e;
+  background-color: $color1;
+  color: $color2;
   height: 25px;
 
   .block__closebtn {
-    @include closebtn (#ed7d40);
+    @include closebtn ($color3);
   }
+  
   @media screen and (max-width: 780px) {
     position: relative;
     top: -6px;
@@ -311,37 +311,16 @@ body {
 
   }  
 }
+.block__warning {
+  @include message__block (#fee3cd, #ed9a5e, #ed7d40);
+}
 
-.block__error{
-  display: none;
-  padding: 20px;
-  text-align: left;
-  line-height: 25px;
-  background-color: rgb(255, 173, 173);
-  color: rgb(255, 61, 61);
-
-  .block__closebtn {
-    @include closebtn (rgb(255, 61, 61));
-  }
-  @media screen and (max-width: 780px) {
-    min-width: 280px;
-  }  
+.block__error {
+  @include message__block (rgb(255, 173, 173), rgb(255, 61, 61), rgb(204, 51, 51));
 }
 
 .block__success {
-  display: none;
-  padding: 20px;
-  text-align: left;
-  line-height: 25px;
-  background-color: rgb(165, 248, 165);
-  color: rgb(34, 170, 34);
-
-  .block__closebtn {
-    @include closebtn (rgb(34, 170, 34));
-  }
-  @media screen and (max-width: 780px) {
-    min-width: 280px;
-  } 
+  @include message__block (rgb(165, 248, 165), rgb(34, 170, 34), rgb(29, 133, 29));
 }
 
 .wrn {
