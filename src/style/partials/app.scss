@@ -6,22 +6,27 @@ $blue-medium-color: #3dc5ed;
 
 
 @font-face {
-  font-family: pfdintextpro-regular;  
-  src: url(../../fonts/pfdintextpro-regular-webfont.woff);
+  font-family: pfdintextpro-light;  
+  src: url(../../fonts/pfdintextpro-light-webfont.woff);
 }
+@font-face {
+  font-family: pfdintextpro-medium;  
+  src: url(../../fonts/pfdintextpro-medium-webfont.woff);
+}
+
 
 @mixin block ($width) {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  max-width: $width;
+  width: $width;
   margin-top: 15px;
   margin-bottom: 15px;
 }
 
 @mixin closebtn ($color) {
   position: relative;
-  left: 15px;
+  left: 13px;
   top: -20px;
   font-size: 18px;
   color: $color;
@@ -30,6 +35,9 @@ $blue-medium-color: #3dc5ed;
   cursor: pointer;
   transition: 0.3s;
   &:hover {
+    left: 14px;
+    font-size: 22px;
+    font-weight: lighter;
     color: darken($color, 20%);
   }
 }
@@ -42,39 +50,41 @@ $blue-medium-color: #3dc5ed;
 }
 
 body {
-  font-family: pfdintextpro-regular;
-
-  font-weight: lighter;
+  font-family: pfdintextpro-light;
+  color: #002d3e;
 }
 
 #footer__button {
   font-size: 24px;
-  width: 200px;
-  height: 60px;
-  background-color: $orange-medium-color;
+  width: 220px;
+  height: 80px;
+  background-color: #f88916;
   color: white;
   border: 10px solid  $gray-light-color;
-  border-radius: 30px;
-  margin: 15px;
+  border-radius: 40px;
+  margin: 28px;
   outline: none;
 }
 
 .header {
+  
   font-size: 21px;
   min-width: 700px;  
 
   @include block (700px);
-
+  margin-top: 90px;
   h1 {
     font-weight: 600;
     font-size: 34px;
     margin-bottom: 0px;
+    font-family: pfdintextpro-medium;
   }
   p {
-    margin: 5px;
+    margin-top: 6px;
+    margin-bottom: 0px;
   }
   h2 {
-    margin-top: 5px;
+    margin-top: 0px;
     font-weight: lighter;
     font-size: 34px;
   }
@@ -94,17 +104,24 @@ body {
 }
 
 .order-form {
+  color: #00202f;
   @include block (700px);
   @media screen and (max-width: 780px) {
     @include block (320px);
   }
+  margin-top: 9px;
+}
+
+.block__label {
+  display: block;
+  font-size: 16px;
+  margin-top: 19px;
 }
 
 .order-form__header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-top: 15px;
   margin-bottom: 15px;
   @media screen and (max-width: 780px) {
     display: flex;
@@ -116,77 +133,17 @@ body {
   text-align: left;
   display: flex;
   flex-direction: column;    
-  min-width: 330px;
-}
-
-.radio {
-  margin-top: 3px;
-  border: 1px solid $gray-medium-color;
-  border-left: none;
-  border-right: none;    
-  height: 50px;
   width: 330px;
-  line-height: 50px;
-
-  input[type='radio'] {
-    display: none;
-  }
-
-  label:before {
-    content: " ";
-    display: inline-block;
-    position: relative;
-    top: 1px;
-    margin: 0 5px 0 0;
-    width: 10px;
-    height: 10px;
-    border-radius: 8px;
-    border: 1px solid $gray-medium-color;
-    background-color: transparent;
-  }
-
-  label {
-    position: relative;
-    margin-right: 30px;
-  }
-  
-  label input[type='radio']:checked+span {
-    border-radius: 11px;
-    width: 8px;
-    height: 8px;
-    position: absolute;
-    top: 6px;
-    left: 2px;
-    display: block;
-    background-color: $orange-medium-color;
-  }
-
-  @media screen and (max-width: 780px) {
-    width: 320px;
-  }
-}
-
-.content__line {
-  @include block (720px); 
-  @media screen and (max-width: 780px) {
-    @include block (320px); 
-  }  
-  border: 1px solid $gray-medium-color;
-}
-
-.block__label {
-  display: block;
-  font-size: 16px;
-  margin-top: 10px;
+  margin-top: 0px;
 }
 
 .block__input {
   display: block;
-  margin-top: 3px;
+  margin-top: 6px;
   padding-left: 15px;
   font-size: 16px;
-  height: 48px;
-  width: 300px;
+  height: 44px;
+  width: 313px;
   border: 1px solid $gray-medium-color;
   border-radius: 5px;
   &:focus {
@@ -205,15 +162,74 @@ body {
   }
 }
 
+.radio {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 8px;
+  border: 1px solid $gray-medium-color;
+  border-left: none;
+  border-right: none;    
+  height: 44px;
+  width: 330px;
+  line-height: 44px;
+
+  input[type='radio'] {
+    display: none;
+  }
+
+  label:before {
+    content: " ";
+    display: inline-block;
+    position: relative;
+    top: 2px;
+    margin: 0 10px 0 0;
+    width: 12px;
+    height: 12px;
+    border-radius: 8px;
+    border: 1px solid $gray-medium-color;
+    background-color: transparent;
+  }
+
+  label {
+    position: relative;
+    margin-right: 25px;
+  }
+  
+  label input[type='radio']:checked+span {
+    position: absolute;    
+    border-radius: 11px;
+    width: 10px;
+    height: 10px;
+    top: 17px;
+    left: 2px;
+    display: block;
+    background-color: $orange-medium-color;
+  }
+
+  @media screen and (max-width: 780px) {
+    width: 320px;
+  }
+}
+
+.content__line {
+  @include block (698px); 
+  @media screen and (max-width: 750px) {
+    @include block (320px); 
+  }  
+  border: 0.5px solid #e6e6e6;
+  margin-bottom: 0px;
+}
+
 .block__radio {
   margin-right: 5px;
 }
 
 .block__textarea {
   display: block;
-  width: 300px;
-  height: 102px;
-  margin-top: 3px;
+  width: 298px;
+  height: 107px;
+  margin-top: 6px;
   resize: none;
   border: 1px solid $gray-medium-color;
   border-radius: 5px;
@@ -241,11 +257,14 @@ body {
 .block__warning {
   display: none;
   padding: 20px;
+  text-align: left;
+  line-height: 25px;
   background-color: #fee3cd;
-  color: #ff8645;
+  color: #ed9a5e;
+  height: 25px;
 
   .block__closebtn {
-    @include closebtn (#ff8645);
+    @include closebtn (#ed7d40);
   }
   @media screen and (max-width: 780px) {
     min-width: 280px;
@@ -255,11 +274,13 @@ body {
 .block__error{
   display: none;
   padding: 20px;
+  text-align: left;
+  line-height: 25px;
   background-color: rgb(255, 173, 173);
   color: rgb(255, 61, 61);
 
   .block__closebtn {
-    @include closebtn (#ff8645);
+    @include closebtn (rgb(255, 61, 61));
   }
   @media screen and (max-width: 780px) {
     min-width: 280px;
@@ -269,11 +290,13 @@ body {
 .block__success {
   display: none;
   padding: 20px;
+  text-align: left;
+  line-height: 25px;
   background-color: rgb(165, 248, 165);
   color: rgb(34, 170, 34);
 
   .block__closebtn {
-    @include closebtn (#ff8645);
+    @include closebtn (rgb(34, 170, 34));
   }
   @media screen and (max-width: 780px) {
     min-width: 280px;
@@ -281,8 +304,8 @@ body {
 }
 
 .wrn {
-  border: 1px solid $orange-dark-color;
+  border: 1px solid #fc7204;
   @include placeholder {
-    color: darken($gray-medium-color, 30%);
+    color: #b3b3b3;
   }
 }

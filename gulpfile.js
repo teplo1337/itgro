@@ -67,7 +67,7 @@ gulp.task('js:build', function () {
     gulp.src(path.src.js) 
         .pipe(rigger()) 
         .pipe(sourcemaps.init()) 
-        .pipe(uglify()) 
+        .pipe(uglify().on('error', (error) => console.log(error))) 
         .pipe(sourcemaps.write()) 
         .pipe(gulp.dest(path.build.js))
         .pipe(reload({stream: true}));
@@ -80,7 +80,7 @@ gulp.task('style:build', function () {
         .pipe(sass({
             sourceMap: true,
             errLogToConsole: true
-        }))
+        }).on('error', (error) => console.log(error)))
         .pipe(prefixer())
         .pipe(cssmin())
         .pipe(sourcemaps.write())
